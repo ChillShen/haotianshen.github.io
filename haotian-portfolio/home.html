@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haotian Shen — Graphic Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
+
+<style id="htmlpub-breakpoint-visibility">@media (max-width: 390px) { .hp-hide-mobile { display: none !important; } }
+@media (min-width: 391px) and (max-width: 768px) { .hp-hide-tablet { display: none !important; } }
+@media (min-width: 769px) { .hp-hide-desktop { display: none !important; } }</style><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;
+  --white:#f8f7f4;
+  --gray:#888;
+  --light:#e8e6e1;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:normal;background:rgba(248,247,244,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(10,10,10,0.08)}
+.nav-logo{font-family:var(--serif);font-size:1.5rem;font-weight:400;letter-spacing:0.02em;text-decoration:none;color:var(--black)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;color:var(--black);font-weight:400;position:relative;transition:opacity 0.3s}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--black);transition:width 0.3s ease}
+.nav-links a:hover::after{width:100%}
+
+section{padding:8rem 4rem}
+.container{max-width:1200px;margin:0 auto}
+
+.hero{min-height:100vh;display:flex;align-items:flex-end;padding:0 4rem 6rem;position:relative;overflow:hidden;background:var(--black)}
+.hero-bg{position:absolute;inset:0;background:var(--black)}
+.hero-content{position:relative;z-index:2;max-width:900px}
+.hero-overline{font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:2rem;font-family:var(--sans)}
+.hero h1{font-family:var(--serif);font-size:clamp(4rem,9vw,8rem);font-weight:300;line-height:1.0;letter-spacing:-0.02em;color:var(--white);margin-bottom:2rem}
+.hero h1 em{font-style:italic;font-weight:300}
+.hero-sub{font-size:clamp(1.5rem,2vw,1.2rem);color:rgba(248,247,244,0.65);max-width:565px;line-height:1.7;font-weight:300}
+.hero-scroll{position:absolute;bottom:3rem;right:4rem;writing-mode:vertical-rl;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,247,244,0.4);display:flex;align-items:center;gap:1rem}
+.hero-scroll::before{content:'';width:1px;height:60px;background:rgba(248,247,244,0.2)}
+
+.about-section{background:var(--white);padding:6rem 4rem}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:8rem;align-items:start;max-width:1200px;margin:0 auto}
+.about-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:3rem;padding-top:0.4rem}
+.about-text h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;line-height:1.15;letter-spacing:-0.01em;margin-bottom:2rem}
+.about-text h2 em{font-style:italic}
+.about-text p{color:#444;line-height:1.8;font-size:1.2rem;max-width:580px;margin-bottom:1.5rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:3rem}
+.tag{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;border:1px solid var(--black);padding:0.5rem 1rem;font-family:var(--sans)}
+
+.projects-section{background:#111;padding:3rem 4rem}
+.projects-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:5rem;max-width:1200px;margin-left:auto;margin-right:auto}
+.projects-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray)}
+.projects-header h2{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:-0.02em;color:var(--white);font-style:italic}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1200px;margin:0 auto}
+.project-card{position:relative;overflow:hidden;cursor:pointer;background:#1a1a1a}
+.project-card:hover .card-img{transform:scale(1.04)}
+.project-card:hover .card-overlay{opacity:1}
+.card-img-wrap{aspect-ratio:3/4;overflow:hidden;position:relative}
+.card-img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
+.card-img-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%);display:flex;align-items:center;justify-content:center}
+.card-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);opacity:0;transition:opacity 0.4s ease;display:flex;align-items:center;justify-content:center}
+.card-body{padding:1.5rem 0}
+.card-num{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:0.75rem}
+.card-title{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--white);margin-bottom:0.5rem;line-height:1.2}
+.card-desc{font-size:0.82rem;color:#888;line-height:1.6;margin-bottom:1.25rem}
+.btn-view{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--white);text-decoration:none;border-bottom:1px solid #555;padding-bottom:2px;transition:border-color 0.3s,color 0.3s}
+.btn-view:hover{color:var(--light);border-color:var(--white)}
+
+.contact-section{background:var(--white);padding:10rem 4rem;border-top:1px solid var(--light)}
+.contact-inner{max-width:1200px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:end}
+.contact-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:3rem}
+.contact-left h2{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em}
+.contact-left h2 em{font-style:italic}
+.contact-right p{color:#444;line-height:1.8;margin-bottom:2.5rem;max-width:400px}
+.contact-email{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:3px;display:inline-block;margin-bottom:2.5rem;transition:opacity 0.3s}
+.contact-email:hover{opacity:0.6}
+.social-links{display:flex;gap:1.5rem;align-items:center}
+.social-link{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;color:var(--black);transition:opacity 0.3s}
+.social-link:hover{opacity:0.5}
+.social-icon{width:20px;height:20px}
+
+footer{background:var(--black);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#555}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-content>*{animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) both}
+.hero-overline{animation-delay:0.1s}
+.hero h1{animation-delay:0.25s}
+.hero-sub{animation-delay:0.4s}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:900px){
+nav{padding:1.2rem 2rem}
+.hero,.about-section,.projects-section,.contact-section{padding:5rem 2rem}
+.about-grid{grid-template-columns:1fr;gap:2rem}
+.projects-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+.contact-grid{grid-template-columns:1fr;gap:3rem}
+section{padding:5rem 2rem}
+footer{padding:2rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style><style>#htmlpub-link-input::placeholder{color:rgba(0,0,0,0.40);}ul,ol{padding:20px;}</style><style>#htmlpub-link-input::placeholder{color:rgba(0,0,0,0.40);}ul,ol{padding:20px;}</style><style>#htmlpub-link-input::placeholder{color:rgba(0,0,0,0.40);}ul,ol{padding:20px;}</style></head>
+<body style="">
+
+<nav style="">
+  <a href="home.html" class="nav-logo" style="">Haotian Shen</a>
+  <ul class="nav-links" style="">
+    <li style=""><a href="vr.html" style="">VR Project</a></li>
+    <li><a href="film.html" style="">Film Festival</a></li>
+    <li><a href="restaurant.html">Restaurant Branding</a></li>
+    <li><a href="files/resume429.pdf" download>Resume</a></li>
+    <li><a href="files/pot429.pdf" download>PDF</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg" style=""></div>
+  <div class="hero-content">
+    <p class="hero-overline">Portfolio — Graphic Designer</p>
+    <h1>Haotian<br><em>Shen</em></h1>
+    <p class="hero-sub">Graphic Designer / Visual Storytelling / XR<br><br>I create visual systems and immersive experiences through storytelling, interaction design, and spatial thinking.</p>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<section class="about-section" id="about" style="">
+  <div class="about-grid" style="">
+    <div style="">
+      <p class="about-label" style="">About</p>
+    </div>
+    <div class="about-text reveal" style="">
+      <h2 style="">Designing across<br><em>dimensions</em></h2>
+      <p style="">Haotian Shen is a designer working at the intersection of visual storytelling, extended reality, brand identity, and immersive experience. With a deep curiosity for how design shapes perception, Haotian brings conceptual rigour and craft to every project.</p>
+      <p style="">From spatial narratives in VR to editorial systems for film, from restaurant identities to experimental motion work — the common thread is always story: how meaning is made through image, space, and form.</p>
+      <p>Currently available for freelance collaborations and full-time opportunities in design, XR, and creative direction.</p>
+      <div class="about-tags" style="">
+        <span class="tag">Visual Storytelling</span>
+        <span class="tag">XR / Extended Reality</span>
+        <span class="tag">Brand Identity</span>
+        <span class="tag" style="">Motion Design</span>
+        <span class="tag">Editorial Design</span>
+        <span class="tag">Spatial Thinking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section" id="projects" style="">
+  <div class="projects-header reveal" style="">
+    <p class="projects-label" style="">Selected Work</p>
+    <h2 style="">Featured Projects</h2>
+  </div>
+  <div class="projects-grid" style="">
+
+    <div class="project-card reveal" style="height: 400px;">
+      <div class="card-img-wrap" style="height: 200px; width: 384px;">
+        
+        <img src="https://leadpages.com/api/library/jyofizft826fe5a88ckg19p7" alt="VR Project" class="card-img" style="object-fit: contain; height: 200px;">
+      </div>
+      <div class="card-body" style="">
+        <p class="card-num" style="">01</p>
+        <h3 class="card-title" style="">Virtual Reality Experience</h3>
+        <p class="card-desc" style="">An immersive XR narrative exploring spatial design and human perception in virtual environments.</p>
+        <a href="vr.html" class="btn-view">View Work</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="">
+      <div class="card-img-wrap">
+        <img src="https://leadpages.com/api/library/hx1yyfjqyv1texegxkw0diet" alt="Film Festival Project" class="card-img" style="">
+        
+      </div>
+      <div class="card-body" style="">
+        <p class="card-num">02</p>
+        <h3 class="card-title">Film Festival Identity</h3>
+        <p class="card-desc">A complete visual identity system for an independent film festival — editorial, bold, and cinematic.</p>
+        <a href="film.html" class="btn-view">View Work</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="height: 500px;">
+      <div class="card-img-wrap" style="">
+        <img src="https://leadpages.com/api/library/q8aehmf9c02b5sc5r176ltdw" alt="Restaurant Branding Project" class="card-img" style="object-fit: contain; background-color: transparent; background-image: none; height: 300px;">
+        
+      <div class="card-body" style="">
+        <p class="card-num" style="">03</p>
+        <h3 class="card-title" style="">Restaurant Branding</h3>
+        <p class="card-desc" style="">A cohesive brand identity for a contemporary dining concept — from logo to environment to collateral.</p>
+        <a href="restaurant.html" class="btn-view">View Work</a>
+      </div></div>
+      
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contact" style="">
+  <div class="contact-inner" style="">
+    <div class="contact-label" style="">Get in Touch</div>
+    <div class="contact-grid" style="">
+      <div class="reveal">
+        <h2 style="">Let's make<br><em>something</em><br>together.</h2>
+      </div>
+      <div class="reveal" style="">
+        <p style="">Open to freelance projects, collaborations, and full-time roles. Always happy to talk design, storytelling, and ideas.</p>
+        <a href="/cdn-cgi/l/email-protection#89e1e8e6fde0e8e7fae1ece7c9eee4e8e0e5a7eae6e4" class="contact-email" style=""><span class="__cf_email__" data-cfemail="492128263d2028273a212c27092e24282025672a2624">chillshenhaotianshen@cca.edu</span></a>
+        <div class="social-links" style="">
+          <a href="https://www.instagram.com/shennnht/" class="social-link" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/haotian-shen-65081a332/" class="social-link" aria-label="LinkedIn" style="">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="">
+  <p>© 2026 Haotian Shen</p>
+  <p>Graphic Designer / Visual Storytelling / XR</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+
+</body></html>
